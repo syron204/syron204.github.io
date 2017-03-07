@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycoding.org/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var score_txt = new sjs.Text("YOUR FINAL SCORE: 0", 21, "orange");
+score_txt.setText("YOUR FINAL SCORE:"
+	+localStorage.getItem("score"));
+score_txt.moveTo(50,100);
+//WIN button
+var win_text = new sjs.Text("YOU WIN!!!", 28, "yellow");
+win_text.top().right;
+//start button
+var playBtn = new sjs.Button("PLAY AGAIN?",function(){
+window.location = "fish.html";
+});
+playBtn.center();
+//creator button
+var creator_text = new sjs.Text("SYRON204", 24, "blue");
+creator_text.top().right();
+var info_text = new sjs.Text("CONGRATULATIONS SOLDIER! YOU HAVE SAVED THE HUMAN RACE!", 23, "purple")
+info_text.bottom().right();
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Space Battles </h1>
+
+<div id="target" style="margin:auto;background:green;"></div>
+</body>
+</html>

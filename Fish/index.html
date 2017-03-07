@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycoding.org/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+//menu button
+var menu_text = new sjs.Text("GAME MENU", 28, "blue");
+menu_text.top().right;
+//start button
+var startBtn = new sjs.Button("START",function(){
+window.location = "fish.html";
+});
+startBtn.center();
+//creator button
+var name_text = new sjs.Text("SYRON204", 24, "red");
+name_text.top().right();
+var info_text = new sjs.Text("Mission Debriefing: Use All Arrow Keys To Move Your Spaceship. Watch Out For Enemy Spaceships That Are Bigger Than You. They Will Kill You. Destroy 20 Smaller Spaceships by touching them to win. Good Luck!", 23, "green")
+info_text.bottom().right();
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Space Battles </h1>
+
+<div id="target" style="margin:auto;background:black;"></div>
+</body>
+</html>

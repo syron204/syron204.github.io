@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycoding.org/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+
+var score_txt = new sjs.Text("Your Final Score:0", 21, "orange");
+	score_txt.setText("Your Final Score:"+localStorage.getItem("score"));
+	score_txt.top().left();
+//gameover button
+var menu_text = new sjs.Text("GAME OVER", 28, "blue");
+menu_text.top().right();
+//restart button
+var restartBtn = new sjs.Button("TRY AGAIN?",function(){
+window.location = "fish.html";
+});
+restartBtn.center();
+//info button
+var info_text = new sjs.Text("YOU FAILED. OUR PLANET IS NOW BEING OVER RUN BY ALIENS.", 23, "green")
+info_text.bottom();
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Space Battles </h1>
+
+<div id="target" style="margin:auto;background:black;"></div>
+</body>
+</html>
