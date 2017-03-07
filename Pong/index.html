@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycoding.org/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+
+//menu button
+var menu_text = new sjs.Text("PONG MENU",28,"blue");
+menu_text.centerH()
+var startBtn = new
+sjs.Button("Start", function(){window.location = "pong.html";
+});
+//start button
+startBtn.center();
+var nameBtn = new sjs.Text("BURTON BUER",28,"purple");
+nameBtn.bottom().right();
+
+//how to button
+var howtoBtn = new sjs.Text("use left/right arrow keys to move paddles",28,"white");
+howtoBtn.bottom().left();
+
+
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> Menu </h1>
+
+<div id="target" style="margin:auto;background:green;"></div>
+</body>
+</html>
