@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Instructions </title>
+<script src="https://simplycoding.org/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var back_btn = new sjs.Button("To Level Creator",
+	function(){
+		window.location = "platform.html";
+	});
+back_btn.bottom().left();
+
+var back_btn = new sjs.Button("Back to Menu",
+	function(){
+		window.location = "index.html";
+	});
+back_btn.bottom().offset(350,0);
+
+var Instructions = new sjs.Text("click on the desired object, then drag it to where you want it.",15,"white");
+Instructions.center().top();
+
+var Instructions2 = new sjs.Text("platform: you stand on it. Lasers and enemies bounce off.",15,"brown");
+Instructions2.moveTo(0,25);
+
+var Instructions3 = new sjs.Text("Power Up: the thing that looks like a remote. once touched, it gives your player a laser.",15,"purple");
+Instructions3.moveTo(0,50);
+
+var Instructions4 = new sjs.Text("Score Token: The little circle thing that opens and closes. Once touched, your score will grow by 1 point.",15,"pink");
+Instructions4.moveTo(0,85);
+
+var Instructions5 = new sjs.Text("Flag: This is what you try to get to to advance to the next level.",15,"yellow");
+Instructions5.moveTo(0,125);
+
+var Instructions6 = new sjs.Text("Enemies: One chomps you and one flys into you; they both take all your happiness and joy.",15,"blue");
+Instructions6.moveTo(0,145);
+
+var Instructions7 = new sjs.Text("Jump Pad: The red thing that has electricity arching at the bottom. When touched, good and bad guys alike are propelled upwards.",15,"orange");
+Instructions7.moveTo(0,200);
+
+var Instructions8 = new sjs.Text("Show Button: This nifty device is how you get the information needed to save your level to your computer. You probably won't be able to use this info for anything, so just ignore it.",15,"red");
+Instructions8.moveTo(0,235);
+
+var Instructions9 = new sjs.Text("Test Level Button: This button brings you to where you can test your level, where the bad guys can kill you. >:)",15,"green");
+Instructions9.moveTo(0,290);
+
+var Instructions10 = new sjs.Text("If you exit the level creator while creating, you will lose your level. Have Fun!",18,"white");
+Instructions10.moveTo(0,330);
+
+var Instructions11 = new sjs.Text("Wall: Blocks you and enemies",15,"white");
+Instructions11.moveTo(0,185);
+
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Platform Game </h1>
+
+<div id="target" style="margin:auto;background:black;"></div>
+</body>
+</html>

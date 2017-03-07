@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> GAME OVER!!! </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+
+var background = new sjs.Image("Images/gameover.jpg");
+background.setSize(500,500);
+
+var death_txt = new sjs.Text("NOOO! You Have Failed The Galaxy.",30,"red")
+death_txt.center().offset(0,-50);
+
+var retry_btn = new sjs.Button("Try Again",function(){
+	window.location = "level1.html"
+});
+retry_btn.center().offset(0,90);
+
+var score_txt = new sjs.Text("Score: 0",24,"white");
+score_txt.setText("Score: "+localStorage.getItem("score"));
+score_txt.center().offset(0,130);
+
+var name_txt = new sjs.Text("Syron204",24,"green");
+name_txt.center().bottom();
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> GAME OVER! </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

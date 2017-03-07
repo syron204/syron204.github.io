@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Interstellar Menu </title>
+<script src="https://simplycoding.org/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+
+var background = new sjs.Image("Images/web.gif");
+background.setSize(500,448);
+
+var powerUp_text = new sjs.Text("touch Power Up to shoot a laser by pressing the down arrow",17,"orange");
+powerUp_text.center().offset(0,100);
+
+var score_text = new sjs.Text("touch the circle things that open and close to earn score",17,"orange");
+score_text.center().offset(0,125);
+
+var info_button = new sjs.Button("Level Builder Instructions",function(){
+	window.location = "instruction.html"
+});
+	info_button.top().right();
+
+var playM = new Audio('Music/infinite_strings.mp3');
+playM.play();
+
+var game_name = new sjs.Text("INTERSTELLAR",55,"brown");
+game_name.center()
+
+var syron204 = new sjs.Text("syron204",24,"green");
+syron204.bottom().left();
+
+var design_btn = new sjs.Button("Create a Level",
+	function(){
+		window.location = "platform.html";
+	});
+design_btn.top().left();
+
+var play_btn = new sjs.Button("PLAY",function(){
+	window.location = "level1.html"
+});
+play_btn.center().offset(0,50);
+
+var info_text = new sjs.Text("Arrow keys to move and jump.",21,"orange");
+info_text.center().bottom();
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1></h1>
+
+<div id="target" style="margin:auto;background:black;"></div>
+</body>
+</html>
